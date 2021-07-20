@@ -1,4 +1,9 @@
-import random
+"""
+Add more inputs (like player or team name).
+Store each player's roll totals in separate arrays.
+Choose a dice-based game that you can fully simulate using python.
+"""
+import random   
 def main():
   # roll = random.randint(1,6)
   # print(f'You rolled a {roll}')
@@ -15,6 +20,19 @@ def main():
     else:
       print(f'You rolled a {roll}')
   print(f"You have rolled a total of {dice_sum}")
+  return dice_sum
 
+def player():
+  player_one = True
+  player_two = False
+  player_one_dice_sum = 0
+  player_two_dice_sum = 0
+  
+  print("Player one: ")
+  player_one_dice_sum = main()
+  print("Player Two: ")
+  player_two_dice_sum =  main()
+  print(f"Player one: {player_one_dice_sum}")
+  print(f"Player two: {player_two_dice_sum}")
 if __name__== "__main__":
-  main()
+  player()
